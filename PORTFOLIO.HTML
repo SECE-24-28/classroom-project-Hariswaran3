@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haris Portfolio</title>
+
+<style>
+/* ---------------- GLOBAL ---------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #e6ffff;
+}
+
+/* ---------------- NAVBAR ---------------- */
+#menu{
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-item{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid black;
+    transition: 0.3s;
+}
+
+.menu-item:hover{
+    background: rgb(220, 220, 220);
+}
+
+/* ---------------- SECTIONS ---------------- */
+.section{
+    height: 100vh;
+    padding-top: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------------- HOME SPLIT ---------------- */
+.home-container{
+    width: 90%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LEFT IMAGE */
+.home-left{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#photo{
+    width: 260px;
+    height: 350px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+    transition: 0.4s;
+}
+
+#photo:hover{
+    transform: scale(1.05);
+}
+
+/* RIGHT ABOUT BOX */
+.home-right{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+/* ---------------- BOX STYLE ---------------- */
+.box{
+    width: 70%;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.4s;
+    box-shadow: 0 0 10px white;
+}
+
+.box:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 20px 50px rgb(118, 120, 17);
+}
+
+/* Section box for other pages */
+.section-box{
+    width: 70%;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.4s;
+    box-shadow: 0px 5px 15px rgb(255, 26, 26);
+}
+
+.section-box:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 20px 50px black;
+}
+
+h1, h2{
+    margin-bottom: 18px;
+}
+
+p{
+    font-size: 18px;
+    line-height: 1.6;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ---------------- NAVIGATION ---------------- -->
+<div id="menu">
+    <a class="menu-item" href="#home">Home</a>
+    <a class="menu-item" href="#about">About</a>
+    <a class="menu-item" href="#projects">Projects</a>
+    <a class="menu-item" href="#certificate">Certificates</a>
+    <a class="menu-item" href="#skills">Skills</a>
+    <a class="menu-item" href="#contact">Contact</a>
+</div>
+
+<!-- ---------------- HOME SECTION ---------------- -->
+<section id="home" class="section">
+    <div class="home-container">
+
+        <!-- LEFT : IMAGE -->
+        <div class="home-left">
+            <img src="haris3.jpeg" id="photo">
+        </div>
+
+        <!-- RIGHT : ABOUT SHORT -->
+        <div class="home-right">
+            <div class="box">
+                <h1>ABOUT ME</h1>
+                <p>
+                    I am <b>Hariswaran</b>, studying B.Tech IT (2nd Year) at SECE.<br><br>
+                    Passionate in Software Development, Problem Solving, and Web Design.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ---------------- ABOUT SECTION ---------------- -->
+<section id="about" class="section">
+    <div class="section-box">
+        <h2>ABOUT — FULL DETAILS</h2>
+        <p>
+            Skilled in Python, C, C++, Java, HTML, CSS, JavaScript, DBMS, DSA.<br>
+            Experience with Git, GitHub, MySQL, FlutterFlow, Packet Tracer.<br><br>
+            I enjoy creating real-world impactful applications and participating in hackathons.
+        </p>
+    </div>
+</section>
+
+<!-- ---------------- PROJECT SECTION ---------------- -->
+<section id="projects" class="section">
+    <div class="section-box">
+        <h2>PROJECTS</h2>
+        <p><b>ShareFare:</b> A food sharing donation app with gamification.<br><br>
+           <b>Farm Data Visualization:</b> Dashboard for soil & crop insights.<br><br>
+           <b>IntelliHome:</b> Smart home appliance controller app.
+        </p>
+    </div>
+</section>
+
+<!-- ---------------- CERTIFICATE SECTION ---------------- -->
+<section id="certificate" class="section">
+    <div class="section-box">
+        <h2>CERTIFICATES</h2>
+        <p>
+            • Sololearn C (2024)<br>
+            • Udemy DSA Using C (2024–2025)<br>
+            • IIT Bombay C Certificate (87.5%)<br>
+            • SkillRack C (2024)<br>
+            • AI Robotics – Great Learning (2024)
+        </p>
+    </div>
+</section>
+
+<!-- ---------------- SKILLS SECTION ---------------- -->
+<section id="skills" class="section">
+    <div class="section-box">
+        <h2>SKILLS</h2>
+        <p>
+            Programming: C, Python, C++<br>
+            Web: HTML, CSS, JavaScript<br>
+            Tools: VSCode, GitHub, Canva, Figma<br>
+            Concepts: DSA, DBMS
+        </p>
+    </div>
+</section>
+
+<!-- ---------------- CONTACT SECTION ---------------- -->
+<section id="contact" class="section">
+    <div class="section-box">
+        <h2>CONTACT</h2>
+        <p>
+            Phone: 9786881013<br>
+            Email: hariswaran.m2024it@sece.ac.in<br>
+            GitHub: your-link<br>
+            LinkedIn: your-link
+        </p>
+    </div>
+</section>
+
+</body>
+</html>

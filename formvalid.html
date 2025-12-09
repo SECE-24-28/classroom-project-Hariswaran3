@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> validation </title>
+</head>
+<body>
+
+<form action="check.html" method="get" onsubmit="return validate()">
+
+Enter the Name:
+<input type="text" id="tn" name="tname">
+<span id="stn"></span><br><br>
+
+Enter the Password:
+<input type="password" id="tp" name="pass">
+<span id="spass"></span><br><br>
+
+Enter Confirm Password:
+<input type="password" id="tc" name="con">
+<span id="cpass"></span><br><br>
+
+Choose Gender:<br>
+Male <input type="radio" name="gender" value="m" id="mr">
+Female <input type="radio" name="gender" value="f" id="fr"><br>
+<span id="sg"></span><br><br>
+
+Select Course:
+<select id="course" name="coursename">
+    <option value="-1">------Select Course---------</option>
+    <option value="c">C Language </option>
+    <option value="p">Python Language </option>
+    <option value="C++">C++ Language </option>
+</select>
+<span id="sc"></span><br><br>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+function validate() {
+
+    let ok = true;
+
+    // NAME
+    if (document.getElementById("tn").value === "") {
+        document.getElementById("stn").innerHTML = "ENTER THE NAME";
+        document.getElementById("stn").style.color = "red";
+        ok = false;
+    } else {
+        document.getElementById("stn").innerHTML = "Valid";
+        document.getElementById("stn").style.color = "green";
+    }
+
+    // PASSWORD
+    if (document.getElementById("tp").value === "") {
+        document.getElementById("spass").innerHTML = "ENTER THE PASSWORD";
+        document.getElementById("spass").style.color = "red";
+        ok = false;
+    } else {
+        document.getElementById("spass").innerHTML = "Valid";
+        document.getElementById("spass").style.color = "green";
+    }
+
+    // CONFIRM PASSWORD
+    if (document.getElementById("tc").value === "") {
+        document.getElementById("cpass").innerHTML = "ENTER CONFIRM PASSWORD";
+        document.getElementById("cpass").style.color = "red";
+        ok = false;
+    } else if (document.getElementById("tc").value !== document.getElementById("tp").value) {
+        document.getElementById("cpass").innerHTML = "PASSWORD NOT MATCHING";
+        document.getElementById("cpass").style.color = "red";
+        ok = false;
+    } else {
+        document.getElementById("cpass").innerHTML = "Match";
+        document.getElementById("cpass").style.color = "green";
+    }
+
+    // GENDER
+    if (
+        !document.getElementById("mr").checked &&
+        !document.getElementById("fr").checked
+    ) {
+        document.getElementById("sg").innerHTML = "CHOOSE GENDER";
+        document.getElementById("sg").style.color = "red";
+        ok = false;
+    } else {
+        document.getElementById("sg").innerHTML = "Selected";
+        document.getElementById("sg").style.color = "green";
+    }
+
+    // COURSE
+    if (document.getElementById("course").value === "-1") {
+        document.getElementById("sc").innerHTML = "SELECT A COURSE";
+        document.getElementById("sc").style.color = "red";
+        ok = false;
+    } else {
+        document.getElementById("sc").innerHTML = "Valid";
+        document.getElementById("sc").style.color = "green";
+    }
+
+    return ok; // if false → form won't submit
+}
+
+</script>
+<!doctype html>
+<html lang="en">
+<head>
+<title>Process Data</title>
+</head>
+<body>
+<h2>Student Details</h2>
+ <script type="text/javascript">
+var query=window.location.search;
+var data=new URLSearchParams(query);
+document.write("the query:",query)
+document.write("the data:",data,"<br>");
+document.write("the gender is:",data.get("valradio"))
+</script>	
+</body>	 
+</html>
